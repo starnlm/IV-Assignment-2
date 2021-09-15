@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Merriweather:wght@300&display=swap');
+
+    
+body{
+    background: #B4846C;
+    margin-left: 0;
+    margin-top: 0;
+    font-family: 'Merriweather';
+}
+
+.hero{
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 300px 1035px;
+    /* place-content: space-between; */
+}
+
+h1{
+    font-family: 'Anton';
+    font-size: 3em;
+    margin-bottom: 0px;
+    margin-top: 0;
+}
+.title-text{
+    font-family: 'Bebas Neue';
+    font-size:1.2em;
+}
+
+.head{
+    font-family: 'Merriweather';
+    margin-top: 1px;
+}
+
+.title{
+    text-align: center;
+}
+
+.navigation{
+    height: 600px;
+    width: 300px;
+    background-image: url('/images/record.png');
+    background-repeat: no-repeat;
+    background-size: 95% 100%;
+    margin-top: 10px;
+}
+
+ul{
+    margin-top: 0;
+    list-style-type: none;
+    color: aliceblue;
+}
+
+.nav-home{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    cursor: pointer;    
+}
+.nav-home:hover{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-1{
+    left: 100px;
+    top: 50px;
+    cursor: pointer;
+}
+.nav-1:hover{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-2{
+    margin-left: 150px;
+    top: 120px;
+    cursor: pointer;
+}
+.nav-2:hover{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-3{
+    margin-left: 200px;
+    top: 200px;
+    cursor: pointer;
+}
+.nav-3:hover{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-4{
+    margin-left: 150px;
+    top: 280px;
+    cursor: pointer;
+}
+.nav-4:hover{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-5{
+    margin-left: 100px;
+    top: 350px;
+    cursor: pointer;
+}
+.nav-5:hover{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-6{
+    margin-bottom: 50px;
+    top: 400px;
+    cursor: pointer;
+}
+.nav-6:hover{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.content1{
+    display: none;
+}
+
+.content2{
+    display: none;
+}
+
+.content3{
+    display: none;
+}
+
+.content4{
+    display: none;
+}
+
+.content5 {
+    display: none;
+}
+
+.content6 {
+    display: none;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.all-content {
+    background-color: #7D5A50;
+    /* border-color:black; */
+    height: 470px;
+    -webkit-box-shadow: 0 0 10px 4px #000 inset;
+    box-shadow: 0 0 9px 4px #000 inset;
+    border-radius: 5px;
+}
+
+.change-content:after {
+    content: '';
+    animation: changetext 20s infinite linear;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes changetext {
+    0%{content: 'ux Developer'}
+    33%{content: 'ui Developer'}
+    66%{content: 'Web Developer'}
+    100%{content: 'designer'}
+}
+
+.quote {
+    text-align: center;
+    padding-top: 150px;
+}
+
+.information {
+    display: grid;
+    grid-template-columns: 250px 150px 250px;
+    justify-content: space-between;
+    padding-top: 230px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapper GOATS!</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <section class = "hero">
+        <div class="main">
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li class = "relative nav-home"><span id = "home" class = "absolute" data-recordid="home-record-id">Home</span></li>
+                        <li class = "relative nav-1"><span id = "first" class = "absolute">Nav 1</span></li>
+                        <li class = "relative nav-2"><span id = "second" class = "absolute">Nav 2</span></li>
+                        <li class = "relative nav-3"><span id = "third" class = "absolute">Nav 3</span></li>
+                        <li class = "relative nav-4"><span id = "fourth" class = "absolute">Nav 4</span></li>
+                        <li class = "relative nav-5"><span id = "fifth" class = "absolute">Nav 5</span></li>
+                        <li class = "relative nav-6"><span id = "sixth" class = "absolute">Nav 6</span></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="secondary">
+                <div class="title">
+                    <h1>Rapper<span class= "title-text">GOATS!</span></h1>
+                    <p class = "head">In Autumn 2019, 108 hip-hop and music experts ranked their top 5 <br> favorites out of the 311 nominated songs in an online survey by the BBC.</p>
+                </div>
+                
+    
+                <div id = "main-viz" class="main_content all-content">
+                    <div class="quote">
+                        <p class = "change-content"></p>
+                    </div>
+                    <div class="information">
+                        <p>Dashboard by: Nand Lal Mishra</p>
+                        <p>Data Source: </p>
+                        <p>Find the design summary report <a href="#">here</a></p>
+                    </div>
+                </div>
+
+                <div id = "home-record-id1" class = "content1 all-content">
+                    <p>home1</p>    
+                </div>
+
+                <div id = "home-record-id2" class = "content2 all-content">
+                    <p>home2</p>    
+                </div>
+
+                <div id = "home-record-id3" class = "content3 all-content">
+                    <p>home3</p>    
+                </div>
+
+                <div id = "home-record-id4" class = "content4 all-content">
+                    <p>home4</p>    
+                </div>
+
+                <div id = "home-record-id5" class = "content5 all-content">
+                    <p>home5</p>    
+                </div>
+
+                <div id = "home-record-id6" class = "content6 all-content">
+                    <p>home6</p>    
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <script>
+
+        const navBtn = document.getElementById('home');
+        const firstBtn = document.getElementById('first');
+        const secondBtn = document.getElementById('second');
+        const thirdBtn = document.getElementById('third');
+        const fourthBtn = document.getElementById('fourth');
+        const fifthBtn = document.getElementById('fifth');
+        const sixthBtn = document.getElementById('sixth');
+        const firstData = document.getElementById('home-record-id1');
+        const secondData = document.getElementById('home-record-id2');
+        const thirdData = document.getElementById('home-record-id3');
+        const fourthData = document.getElementById('home-record-id4');
+        const fifthData = document.getElementById('home-record-id5');
+        const sixthData = document.getElementById('home-record-id6');
+              dData = document.getElementById('main-viz');
+              
+
+        navBtn.addEventListener('click', () =>{
+            firstData.style.display = "none";
+            secondData.style.display = "none";
+            thirdData.style.display = "none";
+            fourthData.style.display = "none";
+            fifthData.style.display = "none";
+            sixthData.style.display = "none";
+            dData.style.display = "block";
+            navBtn.style.fontWeight = "bold";
+            firstBtn.style.fontWeight = "normal";
+            secondBtn.style.fontWeight = "normal";
+            thirdBtn.style.fontWeight = "normal";
+            fourthBtn.style.fontWeight = "normal";
+            fifthBtn.style.fontWeight = "normal";
+            sixthBtn.style.fontWeight = "normal";
+        });
+
+        firstBtn.addEventListener('click', () =>{
+            firstData.style.display = "block";
+            secondData.style.display = "none";
+            thirdData.style.display = "none";
+            fourthData.style.display = "none";
+            fifthData.style.display = "none";
+            sixthData.style.display = "none";
+            dData.style.display = "none";
+            navBtn.style.fontWeight = "normal";
+            firstBtn.style.fontWeight = "bold";
+            secondBtn.style.fontWeight = "normal";
+            thirdBtn.style.fontWeight = "normal";
+            fourthBtn.style.fontWeight = "normal";
+            fifthBtn.style.fontWeight = "normal";
+            sixthBtn.style.fontWeight = "normal";
+        });
+
+
+        secondBtn.addEventListener('click', () =>{
+            firstData.style.display = "none";
+            secondData.style.display = "block";
+            thirdData.style.display = "none";
+            fourthData.style.display = "none";
+            fifthData.style.display = "none";
+            sixthData.style.display = "none";
+            dData.style.display = "none";
+            navBtn.style.fontWeight = "normal";
+            firstBtn.style.fontWeight = "normal";
+            secondBtn.style.fontWeight = "bold";
+            thirdBtn.style.fontWeight = "normal";
+            fourthBtn.style.fontWeight = "normal";
+            fifthBtn.style.fontWeight = "normal";
+            sixthBtn.style.fontWeight = "normal";
+
+        });
+
+        thirdBtn.addEventListener('click', () =>{
+            firstData.style.display = "none";
+            secondData.style.display = "none";
+            thirdData.style.display = "block";
+            fourthData.style.display = "none";
+            fifthData.style.display = "none";
+            sixthData.style.display = "none";
+            dData.style.display = "none";
+            navBtn.style.fontWeight = "normal";
+            firstBtn.style.fontWeight = "normal";
+            secondBtn.style.fontWeight = "normal";
+            thirdBtn.style.fontWeight = "bold";
+            fourthBtn.style.fontWeight = "normal";
+            fifthBtn.style.fontWeight = "normal";
+            sixthBtn.style.fontWeight = "normal";
+        });
+
+        fourthBtn.addEventListener('click', () =>{
+            firstData.style.display = "none";
+            secondData.style.display = "none";
+            thirdData.style.display = "none";
+            fourthData.style.display = "block";
+            fifthData.style.display = "none";
+            sixthData.style.display = "none";
+            dData.style.display = "none";
+            navBtn.style.fontWeight = "normal";
+            firstBtn.style.fontWeight = "normal";
+            secondBtn.style.fontWeight = "normal";
+            thirdBtn.style.fontWeight = "normal";
+            fourthBtn.style.fontWeight = "bold";
+            fifthBtn.style.fontWeight = "normal";
+            sixthBtn.style.fontWeight = "normal";
+        });
+        
+        fifthBtn.addEventListener('click', () =>{
+            firstData.style.display = "none";
+            secondData.style.display = "none";
+            thirdData.style.display = "none";
+            fourthData.style.display = "none";
+            fifthData.style.display = "block";
+            sixthData.style.display = "none";
+            dData.style.display = "none";
+            navBtn.style.fontWeight = "normal";
+            firstBtn.style.fontWeight = "normal";
+            secondBtn.style.fontWeight = "normal";
+            thirdBtn.style.fontWeight = "normal";
+            fourthBtn.style.fontWeight = "normal";
+            fifthBtn.style.fontWeight = "bold";
+            sixthBtn.style.fontWeight = "normal";
+        });
+        
+        sixthBtn.addEventListener('click', () =>{
+            firstData.style.display = "none";
+            secondData.style.display = "none";
+            thirdData.style.display = "none";
+            fourthData.style.display = "none";
+            fifthData.style.display = "none";
+            sixthData.style.display = "block";
+            dData.style.display = "none";
+            navBtn.style.fontWeight = "normal";
+            firstBtn.style.fontWeight = "normal";
+            secondBtn.style.fontWeight = "normal";
+            thirdBtn.style.fontWeight = "normal";
+            fourthBtn.style.fontWeight = "normal";
+            fifthBtn.style.fontWeight = "normal";
+            sixthBtn.style.fontWeight = "bold";
+        });
+        
+    </script>
+
+</body>
+</html>
