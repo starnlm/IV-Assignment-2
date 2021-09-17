@@ -42,7 +42,7 @@ h1{
 .navigation{
     height: 600px;
     width: 300px;
-    background-image: url('/images/record.png');
+    background-image: url('../images/record.png');
     background-repeat: no-repeat;
     background-size: 95% 100%;
     margin-top: 10px;
@@ -62,68 +62,49 @@ ul{
 }
 .nav-home:hover{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.05em;
 }
 
 .nav-1{
-    left: 100px;
-    top: 50px;
+    left: 30px;
+    top: 100px;
     cursor: pointer;
 }
 .nav-1:hover{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.05em;
 }
 
 .nav-2{
-    margin-left: 150px;
-    top: 120px;
+    margin-left: 100px;
+    top: 200px;
     cursor: pointer;
 }
 .nav-2:hover{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.05em;
 }
 
 .nav-3{
-    margin-left: 200px;
-    top: 200px;
+    margin-left: 20px;
+    top: 300px;
     cursor: pointer;
 }
 .nav-3:hover{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.05em;
 }
 
-.nav-4{
-    margin-left: 150px;
-    top: 280px;
-    cursor: pointer;
-}
-.nav-4:hover{
-    font-weight: bold;
-    font-size: 1.2em;
-}
 
 .nav-5{
-    margin-left: 100px;
-    top: 350px;
+    top: 400px;
     cursor: pointer;
 }
 .nav-5:hover{
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.05em;
 }
 
-.nav-6{
-    margin-bottom: 50px;
-    top: 400px;
-    cursor: pointer;
-}
-.nav-6:hover{
-    font-weight: bold;
-    font-size: 1.2em;
-}
 
 .content1{
     display: none;
@@ -137,17 +118,10 @@ ul{
     display: none;
 }
 
-.content4{
-    display: none;
-}
-
 .content5 {
     display: none;
 }
 
-.content6 {
-    display: none;
-}
 
 .relative {
     position: relative;
@@ -164,6 +138,9 @@ ul{
     -webkit-box-shadow: 0 0 10px 4px #000 inset;
     box-shadow: 0 0 9px 4px #000 inset;
     border-radius: 5px;
+    /* white-space: nowrap; */
+    overflow: scroll;
+    /* text-overflow: ellipsis; */
 }
 
 .change-content:after {
@@ -188,7 +165,7 @@ ul{
     display: grid;
     grid-template-columns: 250px 150px 250px;
     justify-content: space-between;
-    padding-top: 230px;
+    padding-top: 220px;
     padding-left: 20px;
     padding-right: 20px;
 }
