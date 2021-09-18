@@ -4438,54 +4438,88 @@ const arr = [...table];
 const genderBtn1 = document.querySelector('#btn1');
 const sb1 = document.querySelector('#gender1')
 
-function artistPoints(arr){
-    var map = {}
-    for (let row of arr) {
-        if (row.artist in map) {
-            map[row.artist] += row.points;
-        } else {
-            map[row.artist] = row.points;
-        }
+var map = {};
+for (let row of table) {
+    if (row.artist in map) {
+        map[row.artist][0] += row.points;
+    } else {
+        map[row.artist] = [row.points, row.gender];
     }
+}
 
-    let artists = []
-    var count = 0;
-    for (let key of Object.keys(map)) {
-        let tempMap = {};
-        tempMap['artist'] = key;
-        tempMap['points'] = map[key];
-        if (count<=20) {
-            artists.push(tempMap);
-            count+=1;
-        }
-    }
+let artists = []
+var count = 0;
+for (let key of Object.keys(map)) {
+    let tempMap = {};
+    tempMap['artist'] = key;
+    tempMap['points'] = map[key][0];
+    tempMap['gender'] = map[key][1];
+    artists.push(tempMap);
+}
 
-    artists.sort((rowOne, rowTwo) => {
+artists.sort((rowOne, rowTwo) => {
     return rowTwo.points - rowOne.points;
     });
-    
-    return artists;
-};
 
-artists = artistPoints(arr);
+var rank=1;
+for(row of artists){
+  row['overallRank'] =rank;
+  rank+=1
+}
+
+function genderFilter(gender) {
+    var genderArray = [];
+    for(row of artists){
+        if(row.gender == gender){
+            genderArray.push(row)
+        }
+    }
+    return genderArray.slice(0,20);
+}
+
 genderBtn1.onclick = (event) => {
     event.preventDefault();
     if(sb1.value == "all"){
-        chart1.data.datasets[0].data = artists;                
+        chart1.data.datasets[0].data = artists.slice(0,25);                
         const labels = [];
-        for(row of artists){
+        for(row of artists.slice(0,25)){
             labels.push(row.artist);
         }
         chart1.data.labels = labels;
+        chart1.options.plugins.tooltip.callbacks = {
+            title: function(item, everything){
+                let title = 'Points ' + item[0].raw.points;
+                return title;
+            },                    
+            label: function(item, everything){
+                // console.log(item.raw.points);
+                let totalRank = item.raw.overallRank;
+                let label= 'Overall Rank is '+ totalRank;
+                return label;
+                // console.log(everything);
+            }
+        }
     }else {
-        const arr = table.filter(d => d.gender === sb1.value);
-        genderData = artistPoints(arr);
+        genderData = genderFilter(sb1.value);
         chart1.data.datasets[0].data = genderData;
         const labels = [];
         for(row of genderData){
             labels.push(row.artist);
         }
         chart1.data.labels = labels;
+        chart1.options.plugins.tooltip.callbacks = {
+            title: function(item, everything){
+                let title = 'Points ' + item[0].raw.points;
+                 return title;
+            },                    
+            label: function(item, everything){
+                let crank = item.dataIndex+1;
+                let totalRank = item.raw.overallRank;
+                let label= 'Gender Rank: ' + crank + ' Overall Rank:' + totalRank;
+                return label;
+                // console.log(everything);
+            }
+        }
     }
     chart1.update();
 };
@@ -4494,11 +4528,11 @@ genderBtn1.onclick = (event) => {
 let chart1 = new Chart('chart1', {
     type: 'bar',
     data: {
-        labels: artists.artist,
+        labels: artists.slice(0,25).artist,
         datasets: [{
             backgroundColor: '#155263',
             barPercentage: 0.85,
-            data: artists,
+            data: artists.slice(0,25),
             parsing: {
                 xAxisKey: 'points',
                 yAxisKey: 'artist'
@@ -4543,6 +4577,20 @@ let chart1 = new Chart('chart1', {
                 // color: 'white'
             },
             tooltip: {
+                displayColors: false,
+                callbacks: {
+                    title: function(item, everything){
+                        let title = 'Points ' + item[0].raw.points;
+                        return title;
+                    },                    
+                    label: function(item, everything){
+                        // console.log(item.raw.points);
+                        let totalRank = item.raw.overallRank;
+                        let label= 'Overall Rank is '+ totalRank;
+                        return label;
+                        // console.log(everything);
+                    }
+                }
             }
         }
     }
@@ -4642,6 +4690,10 @@ let chart2a = new Chart('chart2a', {
                     display: false
                 },
                 ticks: {
+                    autoSkip: true,
+                    maxTicksLimit: 10,
+                    minRotation:0,
+                    maxRotation:0
                 },
                 title: {
                 }
@@ -4654,6 +4706,8 @@ let chart2a = new Chart('chart2a', {
                     // color: 'white'
                 },
                 title: {
+                    display: true,
+                    text: 'Points'
                 }
             }
         },
@@ -4673,6 +4727,20 @@ let chart2a = new Chart('chart2a', {
                 // color: 'white'
             },
             tooltip: {
+                displayColors: false,
+                callbacks:{
+                    title: function(item, everything){
+                        return;
+                    },                    
+                    label: function(item, everything){
+                        // console.log(item);
+                        let year = item.raw.year;
+                        let pts = item.raw.average;
+                        let label= 'Tracks released in '+ year + ' received ' + Math.round(pts* 100) / 100 + ' points on average!';
+                        return label;
+                        // console.log(everything);
+                    }
+                }
             }
         }
     }
@@ -4700,8 +4768,14 @@ let chart2b = new Chart('chart2b', {
                     display: false
                 },
                 ticks: {
+                    autoSkip: true,
+                    maxTicksLimit: 10,
+                    minRotation:0,
+                    maxRotation:0
                 },
                 title: {
+                    display: true,
+                    text: 'Year'
                 }
             },
             y: {
@@ -4712,6 +4786,8 @@ let chart2b = new Chart('chart2b', {
                     // color: 'white'
                 },
                 title: {
+                    display: true,
+                    text: 'Tracks'
                 }
             }
         },
@@ -4731,6 +4807,20 @@ let chart2b = new Chart('chart2b', {
                 // color: 'white'
             },
             tooltip: {
+                displayColors: false,
+                callbacks:{
+                    title: function(item, everything){
+                        return;
+                    },                    
+                    label: function(item, everything){
+                        // console.log(item);
+                        let year = item.raw.year;
+                        let tracks = item.raw.tracks;
+                        let label=  tracks + ' tracks from '+ year + ' received nominations!';
+                        return label;
+                        // console.log(everything);
+                    }
+                }
             }
         }
     }
@@ -4745,7 +4835,7 @@ function trackPoints(arr){
         // console.log(row);
         tempMap['title'] = row.title;
         tempMap['points'] = row.points;
-        tempMap['yearJitter'] = row.year + Math.random() * (-1 - 1) + 1;
+        tempMap['yearJitter'] = row.year + Math.random() * (-2 - 1) + 1;
         tempMap['year'] = row.year;
         finalData.push(tempMap);
     }
@@ -4819,7 +4909,11 @@ let chart3 = new Chart('chart3', {
         },
         plugins: {
             legend: {
-                display: true
+                display: true,
+                title:{
+                    display: true,
+                    text: 'Artist Gender',
+                }
             },
             title: {
                 display: true,
@@ -4831,6 +4925,20 @@ let chart3 = new Chart('chart3', {
                 color: 'black'
             },
             tooltip: {
+                callbacks:{
+                    title: function(item, everything){
+                        let title = item[0].raw.title;
+                        return title;
+                    },                    
+                    label: function(item, everything){
+                        // console.log(item);
+                        let year = item.raw.year;
+                        let totalPoints = item.raw.points;
+                        let label=  'Released in '+ year + ' received total ' + totalPoints + ' points!';
+                        return label;
+                        // console.log(everything);
+                    }
+                }
             }
         }
     }
@@ -4924,6 +5032,21 @@ let radarChart= new Chart('chart5', {
                 // color: 'white'
             },
             tooltip: {
+                callbacks:{
+                    title: function(item, everything){
+                        console.log(item);
+                        let title = item[0].dataset.label;
+                        return title;
+                    },                    
+                    label: function(item, everything){
+                        // console.log(item);
+                        let points = item.raw;
+                        let ranking = item.label;
+                        let label=  ranking + ' of ' + points + ' critic(s)!';
+                        return label;
+                        // console.log(everything);
+                    }
+                }
             }
         }
     }
