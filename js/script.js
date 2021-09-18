@@ -1,3 +1,4 @@
+// Data to be used stored in array 'table'
 let table = [
     {
         "ID": 1,
@@ -4355,100 +4356,125 @@ let table = [
     }
 ]
 
+// Define constants for navigation buttons and charts
+// and highlight current section
 const navBtn = document.getElementById('home');
-const firstBtn = document.getElementById('first');
-const secondBtn = document.getElementById('second');
-const thirdBtn = document.getElementById('third');
-const fifthBtn = document.getElementById('fifth');
-const firstData = document.getElementById('home-record-id1');
-const secondData = document.getElementById('home-record-id2');
-const thirdData = document.getElementById('home-record-id3');
-const fifthData = document.getElementById('home-record-id5');
+const barChartBtn = document.getElementById('barChart');
+const lineBarChartBtn = document.getElementById('lineBarChart');
+const scatterChartBtn = document.getElementById('scatterChart');
+const radarChartBtn = document.getElementById('radarChart');
+const barChartData = document.getElementById('barChart-id');
+const lineBarChartData = document.getElementById('lineBarChart-id');
+const scatterChartData = document.getElementById('scatterChart-id');
+const radarChartData = document.getElementById('radarChart-id');
+const dData = document.getElementById('mainVisual');
 
-dData = document.getElementById('main-viz');
 
-
+// Display only Home section on click
+// and highlight current section
 navBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "none";
-    thirdData.style.display = "none";
-    fifthData.style.display = "none";
+    barChartData.style.display = "none";
+    lineBarChartData.style.display = "none";
+    scatterChartData.style.display = "none";
+    radarChartData.style.display = "none";
     dData.style.display = "block";
     navBtn.style.fontWeight = "bold";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "normal";
+    barChartBtn.style.fontWeight = "normal";
+    lineBarChartBtn.style.fontWeight = "normal";
+    scatterChartBtn.style.fontWeight = "normal";
+    radarChartBtn.style.fontWeight = "normal";
 });
 
-firstBtn.addEventListener('click', () => {
-    firstData.style.display = "block";
-    secondData.style.display = "none";
-    thirdData.style.display = "none";
-    fifthData.style.display = "none";
+// Display only 'Greatest Hip Hop Artists' section on click
+// and highlight current section
+barChartBtn.addEventListener('click', () => {
+    barChartData.style.display = "block";
+    lineBarChartData.style.display = "none";
+    scatterChartData.style.display = "none";
+    radarChartData.style.display = "none";
     dData.style.display = "none";
     navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "bold";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "normal";
+    barChartBtn.style.fontWeight = "bold";
+    lineBarChartBtn.style.fontWeight = "normal";
+    scatterChartBtn.style.fontWeight = "normal";
+    radarChartBtn.style.fontWeight = "normal";
 });
 
-secondBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "block";
-    thirdData.style.display = "none";
-    fifthData.style.display = "none";
+// Display only 'Year-wise Trend' section on click
+// and highlight current section
+lineBarChartBtn.addEventListener('click', () => {
+    barChartData.style.display = "none";
+    lineBarChartData.style.display = "block";
+    scatterChartData.style.display = "none";
+    radarChartData.style.display = "none";
     dData.style.display = "none";
     navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "bold";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "normal";
+    barChartBtn.style.fontWeight = "normal";
+    lineBarChartBtn.style.fontWeight = "bold";
+    scatterChartBtn.style.fontWeight = "normal";
+    radarChartBtn.style.fontWeight = "normal";
 
 });
 
-thirdBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "none";
-    thirdData.style.display = "block";
-    fifthData.style.display = "none";
+// Display only 'All Titles (Gender & Year)' section on click
+// and highlight current section
+scatterChartBtn.addEventListener('click', () => {
+    barChartData.style.display = "none";
+    lineBarChartData.style.display = "none";
+    scatterChartData.style.display = "block";
+    radarChartData.style.display = "none";
     dData.style.display = "none";
     navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "bold";
-    fifthBtn.style.fontWeight = "normal";
+    barChartBtn.style.fontWeight = "normal";
+    lineBarChartBtn.style.fontWeight = "normal";
+    scatterChartBtn.style.fontWeight = "bold";
+    radarChartBtn.style.fontWeight = "normal";
 });
 
-fifthBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "none";
-    thirdData.style.display = "none";
-    fifthData.style.display = "block";
+// Display only 'Artists Head on!' section on click
+// and highlight current section
+radarChartBtn.addEventListener('click', () => {
+    barChartData.style.display = "none";
+    lineBarChartData.style.display = "none";
+    scatterChartData.style.display = "none";
+    radarChartData.style.display = "block";
     dData.style.display = "none";
     navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "bold";
+    barChartBtn.style.fontWeight = "normal";
+    lineBarChartBtn.style.fontWeight = "normal";
+    scatterChartBtn.style.fontWeight = "normal";
+    radarChartBtn.style.fontWeight = "bold";
 });
 
-const arr = [...table];
-const genderBtn1 = document.querySelector('#btn1');
-const sb1 = document.querySelector('#gender1')
+// 'Greatest Hip Hop Artists' Section Visulaisation Setup
 
+// Constants for Dropdown selector and Apply Filter Button
+const genderBtn1 = document.querySelector('#barFilterBtn');
+const sb1 = document.querySelector('#barChartGender')
+
+// Create two hash maps. {map} includes all unique artists and their total points
+// {artistTracks} includes all tracks of each artists with points those tracks received.
+// This will be used to create a drilldown bar chart.
 var map = {};
+var artistTracks = {};
 for (let row of table) {
     if (row.artist in map) {
         map[row.artist][0] += row.points;
     } else {
         map[row.artist] = [row.points, row.gender];
     }
+
+    if (row.artist in artistTracks) {
+        artistTracks[row.artist][0].push(row.title)
+        artistTracks[row.artist][1].push(row.points)
+    }
+    else {
+        artistTracks[row.artist] = [[row.title], [row.points]]
+    }
 }
 
+// Creating an array from {map} to be used for visualisation
 let artists = []
-var count = 0;
 for (let key of Object.keys(map)) {
     let tempMap = {};
     tempMap['artist'] = key;
@@ -4457,82 +4483,100 @@ for (let key of Object.keys(map)) {
     artists.push(tempMap);
 }
 
+// Sort artists in descending order of total points received
 artists.sort((rowOne, rowTwo) => {
     return rowTwo.points - rowOne.points;
-    });
+});
 
-var rank=1;
-for(row of artists){
-  row['overallRank'] =rank;
-  rank+=1
+// Give an overall rank to all the artist based on the sorted array
+var rank = 1;
+for (row of artists) {
+    row['overallRank'] = rank;
+    rank += 1
 }
 
+// Function to filter data for individual genders
+// Only show top 20 artists
 function genderFilter(gender) {
     var genderArray = [];
-    for(row of artists){
-        if(row.gender == gender){
+    for (row of artists) {
+        if (row.gender == gender) {
             genderArray.push(row)
         }
     }
-    return genderArray.slice(0,20);
+    return genderArray.slice(0, 20);
 }
 
+// Changing visualisations when 'Apply Filer/Reset' button is clicked
 genderBtn1.onclick = (event) => {
     event.preventDefault();
-    if(sb1.value == "all"){
-        chart1.data.datasets[0].data = artists.slice(0,25);                
+
+    // By default show top 25 artists and only the overall rank of artists
+    if (sb1.value == "all") {
+        barChartCanvas.data.datasets[0].data = artists.slice(0, 25);
         const labels = [];
-        for(row of artists.slice(0,25)){
+        for (row of artists.slice(0, 25)) {
             labels.push(row.artist);
         }
-        chart1.data.labels = labels;
-        chart1.options.plugins.tooltip.callbacks = {
-            title: function(item, everything){
-                let title = 'Points ' + item[0].raw.points;
+        barChartCanvas.data.labels = labels;
+        barChartCanvas.options.plugins.tooltip.callbacks = {
+            title: function (item, everything) {
+                let title = 'Points ' + item[0].raw.points + ' - Click to know more!!';
                 return title;
-            },                    
-            label: function(item, everything){
+            },
+            label: function (item, everything) {
                 // console.log(item.raw.points);
                 let totalRank = item.raw.overallRank;
-                let label= 'Overall Rank is '+ totalRank;
+                let label = 'Overall Rank is ' + totalRank;
                 return label;
                 // console.log(everything);
             }
         }
-    }else {
+    } else {
+        // For individual genders, show top 20 artists and show gender rank and overall rank both for comparison
         genderData = genderFilter(sb1.value);
-        chart1.data.datasets[0].data = genderData;
+        barChartCanvas.data.datasets[0].data = genderData;
         const labels = [];
-        for(row of genderData){
+        for (row of genderData) {
             labels.push(row.artist);
         }
-        chart1.data.labels = labels;
-        chart1.options.plugins.tooltip.callbacks = {
-            title: function(item, everything){
-                let title = 'Points ' + item[0].raw.points;
-                 return title;
-            },                    
-            label: function(item, everything){
-                let crank = item.dataIndex+1;
+        barChartCanvas.data.labels = labels;
+        barChartCanvas.options.plugins.tooltip.callbacks = {
+            title: function (item, everything) {
+                let title = 'Points ' + item[0].raw.points + ' - Click to know more!!';
+                return title;
+            },
+            label: function (item, everything) {
+                let crank = item.dataIndex + 1;
                 let totalRank = item.raw.overallRank;
-                let label= 'Gender Rank: ' + crank + ' Overall Rank:' + totalRank;
+                let label = 'Gender Rank: ' + crank + ' Overall Rank:' + totalRank;
                 return label;
                 // console.log(everything);
             }
         }
     }
-    chart1.update();
+
+    // Change the cursor to pointer when hovering on bars
+    barChartCanvas.options.onHover = function (e) {
+        e.native.target.style.cursor = 'pointer';
+    }
+    barChartCanvas.data.datasets[0].barPercentage = 0.85;
+    barChartCanvas.options.plugins.title.text = 'Total Points Received by Artists';
+    // Update chart
+    barChartCanvas.update();
 };
 
-// Visulaisation 1
-let chart1 = new Chart('chart1', {
+// Visulaisation 1 - Chart
+const ctx = document.getElementById('barChartCanvas');
+
+let barChartCanvas = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: artists.slice(0,25).artist,
+        labels: artists.slice(0, 25).artist,
         datasets: [{
             backgroundColor: '#155263',
             barPercentage: 0.85,
-            data: artists.slice(0,25),
+            data: artists.slice(0, 25),
             parsing: {
                 xAxisKey: 'points',
                 yAxisKey: 'artist'
@@ -4540,6 +4584,9 @@ let chart1 = new Chart('chart1', {
         }]
     },
     options: {
+        onHover: function (e) {
+            e.native.target.style.cursor = 'pointer';
+        },
         indexAxis: 'y',
         scales: {
             x: {
@@ -4579,14 +4626,14 @@ let chart1 = new Chart('chart1', {
             tooltip: {
                 displayColors: false,
                 callbacks: {
-                    title: function(item, everything){
-                        let title = 'Points ' + item[0].raw.points;
+                    title: function (item, everything) {
+                        let title = 'Points ' + item[0].raw.points + ' - Click to know more!!';
                         return title;
-                    },                    
-                    label: function(item, everything){
+                    },
+                    label: function (item, everything) {
                         // console.log(item.raw.points);
                         let totalRank = item.raw.overallRank;
-                        let label= 'Overall Rank is '+ totalRank;
+                        let label = 'Overall Rank is ' + totalRank;
                         return label;
                         // console.log(everything);
                     }
@@ -4596,44 +4643,86 @@ let chart1 = new Chart('chart1', {
     }
 });
 
-// Visualisation 2
+// Create drilldown for bar chart
+// https://www.chartjs.org/docs/latest/developers/api.html#getelementsateventformode-e-mode-options-usefinalposition
+function clickHandler(click) {
+    const points = barChartCanvas.getElementsAtEventForMode(click, 'nearest', { intersect: true }, true);
+    if (points.length) {
+        const firstPoint = points[0].element.$context.raw.artist;
+        // console.log(firstPoint);
 
-const genderBtn2 = document.querySelector('#btn2');
-const sb2 = document.querySelector('#gender2');
-function yearPoints(arr){
+        if (artistTracks[firstPoint]) {
+            barChartCanvas.data.datasets[0].data = artistTracks[firstPoint][1];
+            barChartCanvas.data.datasets[0].barPercentage = 1;
+            barChartCanvas.data.datasets[0].barThickness = 15;
+            barChartCanvas.data.labels = artistTracks[firstPoint][0];
+            barChartCanvas.options.plugins.title.text = 'Points Received by ' + firstPoint + "'s " + 'tracks';
+            barChartCanvas.options.plugins.tooltip.callbacks = {
+                title: function (item, everything) {
+                    // let title = 'Points ' + item[0].raw.points;
+                    return;
+                },
+                label: function (item, everything) {
+                    // console.log(item);
+                    let track = item.label;
+                    let pts = item.raw;
+                    let label = track + ' received ' + pts + ' points!';
+                    return label;
+                    // console.log(everything);
+                }
+            }
+            barChartCanvas.options.onHover = function (e) {
+                e.native.target.style.cursor = 'default';
+            }
+            barChartCanvas.update();
+        }
+    }
+}
+// Call the function when clicking on a bar to drilldown
+ctx.onclick = clickHandler;
+
+// 'Year-wise Trend' Section Visualisation Setup
+
+// Constants for Dropdown selector and Apply Filter Button
+const genderBtn2 = document.querySelector('#lineBarFilterBtn');
+const sb2 = document.querySelector('#lineBarGender');
+
+// Function to create an array containing average points received per year sorted by year for smooth visualisation
+function yearPoints(arr) {
     var data = []
 
-    for(let row of arr){
+    for (let row of arr) {
         let tempMap = {};
         tempMap[row.year] = row.points;
         data.push(tempMap);
-        } 
-        // https://codereview.stackexchange.com/questions/141530/calculate-average-of-array-of-objects-per-key-value-using-reduce
-        var avg = Array.from(data.reduce(
-                (acc, obj) => Object.keys(obj).reduce( 
-                    (acc, key) => typeof obj[key] == "number"
-                        ? acc.set(key, (acc.get(key) || []).concat(obj[key]))
-                        : acc,
-                acc),
-            new Map()), 
-                ([year, values]) =>
-                    ({ year, average: values.reduce( (a,b) => a+b ) / values.length })
-        );
+    }
+    // https://codereview.stackexchange.com/questions/141530/calculate-average-of-array-of-objects-per-key-value-using-reduce
+    var avg = Array.from(data.reduce(
+        (acc, obj) => Object.keys(obj).reduce(
+            (acc, key) => typeof obj[key] == "number"
+                ? acc.set(key, (acc.get(key) || []).concat(obj[key]))
+                : acc,
+            acc),
+        new Map()),
+        ([year, values]) =>
+            ({ year, average: values.reduce((a, b) => a + b) / values.length })
+    );
 
-        avg.sort((rowOne, rowTwo) => {
-                    return rowOne.year - rowTwo.year;
-        });
+    avg.sort((rowOne, rowTwo) => {
+        return rowOne.year - rowTwo.year;
+    });
     return avg;
 };
 
-function yearTracks(arr){
+// Function to create an array containing total tracks nominated each year
+function yearTracks(arr) {
     var data = [];
     let map = {};
-    for(let row of arr){
-        if(row.year in map){
-            map[row.year] +=1;
-        }else{
-            map[row.year] =1;
+    for (let row of arr) {
+        if (row.year in map) {
+            map[row.year] += 1;
+        } else {
+            map[row.year] = 1;
         };
     };
 
@@ -4643,34 +4732,37 @@ function yearTracks(arr){
         tempMap['tracks'] = map[key];
         data.push(tempMap);
     };
-        return data;
+    return data;
 }
 
-yearData = yearPoints(arr);
-trackData = yearTracks(arr);
+yearData = yearPoints(table);
+trackData = yearTracks(table);
+
+// Changing visualisations when 'Apply Filer' button is clicked
 genderBtn2.onclick = (event) => {
     event.preventDefault();
-    if(sb2.value == "all"){
-        yearData = yearPoints(arr);
-        trackData = yearTracks(arr);
-        chart2a.data.datasets[0].data = yearData;  
-        chart2b.data.datasets[0].data = trackData;                
-        
-    }else{
+    if (sb2.value == "all") {
+        yearData = yearPoints(table);
+        trackData = yearTracks(table);
+        lineBarChartCanvasA.data.datasets[0].data = yearData;
+        lineBarChartCanvasB.data.datasets[0].data = trackData;
+
+    } else {
+        // Filter the data by gender and then call the respective function for data manipulation
         const arrGender = table.filter(d => d.gender === sb2.value);
         yearData = yearPoints(arrGender);
         trackData = yearTracks(arrGender);
         // console.log(trackData)
-        chart2a.data.datasets[0].data = yearData;
-        chart2b.data.datasets[0].data = trackData;
-        
+        lineBarChartCanvasA.data.datasets[0].data = yearData;
+        lineBarChartCanvasB.data.datasets[0].data = trackData;
+
     }
-    chart2a.update();
-    chart2b.update();
+    lineBarChartCanvasA.update();
+    lineBarChartCanvasB.update();
 };
 
-// Visualisation 2a
-let chart2a = new Chart('chart2a', {
+// Line Chart Visualisation
+let lineBarChartCanvasA = new Chart('lineBarChartCanvasA', {
     type: 'line',
     data: {
         datasets: [{
@@ -4692,8 +4784,8 @@ let chart2a = new Chart('chart2a', {
                 ticks: {
                     autoSkip: true,
                     maxTicksLimit: 10,
-                    minRotation:0,
-                    maxRotation:0
+                    minRotation: 0,
+                    maxRotation: 0
                 },
                 title: {
                 }
@@ -4728,15 +4820,15 @@ let chart2a = new Chart('chart2a', {
             },
             tooltip: {
                 displayColors: false,
-                callbacks:{
-                    title: function(item, everything){
+                callbacks: {
+                    title: function (item, everything) {
                         return;
-                    },                    
-                    label: function(item, everything){
+                    },
+                    label: function (item, everything) {
                         // console.log(item);
                         let year = item.raw.year;
                         let pts = item.raw.average;
-                        let label= 'Tracks released in '+ year + ' received ' + Math.round(pts* 100) / 100 + ' points on average!';
+                        let label = 'Tracks released in ' + year + ' received ' + Math.round(pts * 100) / 100 + ' points on average!';
                         return label;
                         // console.log(everything);
                     }
@@ -4746,9 +4838,8 @@ let chart2a = new Chart('chart2a', {
     }
 });
 
-// Visualisation 2b
-
-let chart2b = new Chart('chart2b', {
+// Bar Chart Visualisation
+let lineBarChartCanvasB = new Chart('lineBarChartCanvasB', {
     type: 'bar',
     data: {
         datasets: [{
@@ -4770,8 +4861,8 @@ let chart2b = new Chart('chart2b', {
                 ticks: {
                     autoSkip: true,
                     maxTicksLimit: 10,
-                    minRotation:0,
-                    maxRotation:0
+                    minRotation: 0,
+                    maxRotation: 0
                 },
                 title: {
                     display: true,
@@ -4808,15 +4899,15 @@ let chart2b = new Chart('chart2b', {
             },
             tooltip: {
                 displayColors: false,
-                callbacks:{
-                    title: function(item, everything){
+                callbacks: {
+                    title: function (item, everything) {
                         return;
-                    },                    
-                    label: function(item, everything){
+                    },
+                    label: function (item, everything) {
                         // console.log(item);
                         let year = item.raw.year;
                         let tracks = item.raw.tracks;
-                        let label=  tracks + ' tracks from '+ year + ' received nominations!';
+                        let label = tracks + ' track(s) from ' + year + ' received nomination(s)!';
                         return label;
                         // console.log(everything);
                     }
@@ -4826,20 +4917,23 @@ let chart2b = new Chart('chart2b', {
     }
 });
 
-// Visualisation 3
+// "All Titles (Gender & Year)" Section Visualisation Setup
 
-function trackPoints(arr){
+// Function for obtaining all tracks with thier points and year track released in
+function trackPoints(arr) {
     let finalData = [];
-    for(row of arr){
+    for (row of arr) {
         let tempMap = {};
         // console.log(row);
         tempMap['title'] = row.title;
         tempMap['points'] = row.points;
+        // Add jitter using Math.random() to avoid points lining up for each year
         tempMap['yearJitter'] = row.year + Math.random() * (-2 - 1) + 1;
+        // Still need year for labeling x axis
         tempMap['year'] = row.year;
         finalData.push(tempMap);
     }
-    console.log(finalData); 
+    // console.log(finalData); 
     return finalData;
 }
 
@@ -4847,7 +4941,9 @@ const arrMale = trackPoints(table.filter(d => d.gender === 'male'));
 const arrFemale = trackPoints(table.filter(d => d.gender === 'female'));
 const arrMixed = trackPoints(table.filter(d => d.gender === 'mixed'));
 
-let chart3 = new Chart('chart3', {
+// Scatter Chart Visualisation
+// Using three separate datasets for each gender
+let scatterChartCanvas = new Chart('scatterChartCanvas', {
     type: 'scatter',
     data: {
         datasets: [{
@@ -4859,7 +4955,7 @@ let chart3 = new Chart('chart3', {
                 xAxisKey: 'yearJitter',
                 yAxisKey: 'points'
             }
-        },{
+        }, {
             label: 'Mixed',
             backgroundColor: '#155263',
             barPercentage: 0.85,
@@ -4868,7 +4964,7 @@ let chart3 = new Chart('chart3', {
                 xAxisKey: 'yearJitter',
                 yAxisKey: 'points'
             }
-        },{
+        }, {
             label: 'Male',
             backgroundColor: '#FB929E',
             barPercentage: 0.85,
@@ -4885,13 +4981,16 @@ let chart3 = new Chart('chart3', {
                 grid: {
                     display: false
                 },
+                // Remove "," from x-axis label as we add jitter so it is not whole number anymore
                 ticks: {
-                    callback: function(value){
+                    callback: function (value) {
                         var tempVal = value.toString();
                         return tempVal.replace(',', '');
                     }
                 },
                 title: {
+                    display: true,
+                    text: 'Year'
                 }
             },
             y: {
@@ -4902,6 +5001,8 @@ let chart3 = new Chart('chart3', {
                     // color: 'black'
                 },
                 title: {
+                    display: true,
+                    text: 'Points'
                 }
             }
         },
@@ -4910,7 +5011,7 @@ let chart3 = new Chart('chart3', {
         plugins: {
             legend: {
                 display: true,
-                title:{
+                title: {
                     display: true,
                     text: 'Artist Gender',
                 }
@@ -4922,19 +5023,19 @@ let chart3 = new Chart('chart3', {
                     size: 15,
                     family: "'Roboto Slab', sans-serif",
                 },
-                color: 'black'
+                // color: 'black'
             },
             tooltip: {
-                callbacks:{
-                    title: function(item, everything){
+                callbacks: {
+                    title: function (item, everything) {
                         let title = item[0].raw.title;
                         return title;
-                    },                    
-                    label: function(item, everything){
+                    },
+                    label: function (item, everything) {
                         // console.log(item);
                         let year = item.raw.year;
                         let totalPoints = item.raw.points;
-                        let label=  'Released in '+ year + ' received total ' + totalPoints + ' points!';
+                        let label = 'Released in ' + year + ' received total ' + totalPoints + ' points!';
                         return label;
                         // console.log(everything);
                     }
@@ -4944,43 +5045,47 @@ let chart3 = new Chart('chart3', {
     }
 });
 
-// Visualization 5
+// 'Artists Head on!' Section Visualization Setup
 
-const selector1 = document.getElementById('artist1');
-const selector2 = document.getElementById('artist2');
-const artistBtn = document.querySelector('#btn5');
+const selector1 = document.getElementById('artistOne');
+const selector2 = document.getElementById('artistTwo');
+const artistBtn = document.querySelector('#radarFilterBtn');
 var color = Chart.helpers.color;
 
-
+// Find all unique artist names
 var art = new Set();
-for(row of table){
+for (row of table) {
     art.add(row.artist)
 }
 
+// Sort all names alphabatically
 var sortedArt = [...art].sort();
 
+// Add all the names to selector so that they can be chosen from a drop down list
 var str = "<option value='none' selected disabled hidden> Select Artist</option>"
-for(row of sortedArt){
+for (row of sortedArt) {
     str += "<option value = '" + row + "'>" + row + "</option>";
 }
 // console.log(str)
 selector1.innerHTML = str;
 selector2.innerHTML = str;
 
-function individualPoints(name){
-    var allPoints = [0,0,0,0,0];
-    for(row of table){
-        if (row.artist == name){
-            allPoints[0]+=row.n1;
-            allPoints[1]+=row.n2;
-            allPoints[2]+=row.n3;
-            allPoints[3]+=row.n4;
-            allPoints[4]+=row.n5;
+// Function to find total votes received as favourite for all artist
+function individualPoints(name) {
+    var allPoints = [0, 0, 0, 0, 0];
+    for (row of table) {
+        if (row.artist == name) {
+            allPoints[0] += row.n1;
+            allPoints[1] += row.n2;
+            allPoints[2] += row.n3;
+            allPoints[3] += row.n4;
+            allPoints[4] += row.n5;
         }
     }
     return allPoints;
 }
 
+// Change radar chart based on artists selected from the drop down menu
 artistBtn.onclick = (event) => {
     event.preventDefault();
     var artistName1 = selector1.value
@@ -4989,30 +5094,30 @@ artistBtn.onclick = (event) => {
     radarChart.data.datasets[1].data = individualPoints(selector2.value);
     radarChart.data.datasets[0].label = selector1.value;
     radarChart.data.datasets[1].label = selector2.value;
-    console.log(individualPoints(selector1.value));
-    console.log(individualPoints(selector2.value));
+    // console.log(individualPoints(selector1.value));
+    // console.log(individualPoints(selector2.value));
     radarChart.update();
 };
 
-
-let radarChart= new Chart('chart5', {
+// Radar Chart Visualisation
+let radarChart = new Chart('radarChartCanvas', {
     type: 'radar',
     data: {
         labels: ['Favourite', 'Second Fav', 'Third Fav', 'Fourth Fav', 'Fifth Fav'],
         datasets: [{
-            label:'Artist1',
+            label: 'Artist1',
             backgroundColor: color('rgb(21,82,99)').alpha(0.2).rgbString(),
             borderColor: 'rgb(21,82,99)',
             pointBackgroundColor: 'rgb(21,82,99)',
             barPercentage: 0.85,
-            data: [0,0,0,0,0]
-        },{
-            label:'Artist2',
+            data: [0, 0, 0, 0, 0]
+        }, {
+            label: 'Artist2',
             backgroundColor: color('rgb(23,185,120)').alpha(0.2).rgbString(),
             borderColor: 'rgb(23,185,120)',
             pointBackgroundColor: 'rgb(23,185,120)',
             barPercentage: 0.85,
-            data: [0,0,0,0,0]
+            data: [0, 0, 0, 0, 0]
         }]
     },
     options: {
@@ -5032,17 +5137,17 @@ let radarChart= new Chart('chart5', {
                 // color: 'white'
             },
             tooltip: {
-                callbacks:{
-                    title: function(item, everything){
-                        console.log(item);
+                callbacks: {
+                    title: function (item, everything) {
+                        // console.log(item);
                         let title = item[0].dataset.label;
                         return title;
-                    },                    
-                    label: function(item, everything){
+                    },
+                    label: function (item, everything) {
                         // console.log(item);
                         let points = item.raw;
                         let ranking = item.label;
-                        let label=  ranking + ' of ' + points + ' critic(s)!';
+                        let label = ranking + ' of ' + points + ' critic(s)!';
                         return label;
                         // console.log(everything);
                     }
@@ -5051,4 +5156,3 @@ let radarChart= new Chart('chart5', {
         }
     }
 });
-

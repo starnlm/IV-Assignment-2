@@ -20,87 +20,90 @@
             <div class="navigation">
                 <nav>
                     <ul>
-                        <li class="relative nav-home"><span id="home" class="absolute"
-                                data-recordid="home-record-id">Home</span></li>
-                        <li class="relative nav-1"><span id="first" class="absolute">Greatest Hip Hop Artists</span>
+                        <li class="relative nav-home"><span id="home" class="absolute">Home</span></li>
+                        <li class="relative nav-barChart"><span id="barChart" class="absolute">Greatest Hip Hop Artists</span>
                         </li>
-                        <li class="relative nav-2"><span id="second" class="absolute">Year-wise Trend</span></li>
-                        <li class="relative nav-3"><span id="third" class="absolute">All Titles (Gender &amp; Year)</span></li>
-                        <li class="relative nav-5"><span id="fifth" class="absolute">Artists Head on!</span></li>
+                        <li class="relative nav-lineBarChart"><span id="lineBarChart" class="absolute">Year-wise Trend</span></li>
+                        <li class="relative nav-scatterChart"><span id="scatterChart" class="absolute">All Titles (Gender &amp;
+                                Year)</span></li>
+                        <li class="relative nav-radarChart"><span id="radarChart" class="absolute">Artists Head on!</span></li>
                     </ul>
                 </nav>
             </div>
             <div class="secondary">
                 <div class="title">
                     <h1>Rapper<span class="title-text">GOATS!</span></h1>
-                    <p class="head">In Autumn 2019, 108 hip-hop and music experts ranked their top 5 <br> favorites out
+                    <p class="head">In Autumn 2019, more than 100 hip-hop and music experts from 15 countries <br>
+                        ranked their top 5 favorites out
                         of the 311 nominated songs in an online survey by the BBC.</p>
                 </div>
 
 
-                <div id="main-viz" class="all-content">
+                <div id="mainVisual" class="all-content">
                     <div class="initial-text">
-                        <p style = "text-align: center; padding-top: 100px;">Words that matter.</p>
+                        <p style="text-align: center; padding-top: 100px;">Words that matter.</p>
                     </div>
                     <div class="quote">
                         <p class="change-content"></p>
                     </div>
                     <div class="information">
                         <p>Dashboard by: Nand Lal Mishra</p>
-                        <p>Data Source: </p>
-                        <p>Design summary report <a href="#">here</a></p>
+                        <p>"Scratch" the record on left to navigate!</p>
+                        <p>Data Source: <a
+                                href="https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-04-14">Tidy
+                                Tuesday</a></p>
                     </div>
                 </div>
 
-                <div id="home-record-id1" class="content1 all-content">
+                <div id="barChart-id" class="content-barChart all-content">
                     <div class="genderLabel">
                         <div class="colorDiv">
                             <label for="Gender">Choose Gender</label>
-                            <select name="gender" id="gender1">
+                            <select name="gender" id="barChartGender">
                                 <option value="all">All</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
-                                <option value="mixed">Mixed</option>                    
+                                <option value="mixed">Mixed</option>
                             </select>
-                        <button id="btn1">Apply Filter</button>
+                            <button id="barFilterBtn" class='buttons'>Apply Filter/Reset</button>
                         </div>
                     </div>
-                        <canvas id="chart1" width="500px" height="300px"></canvas>                    
+                    <canvas id="barChartCanvas" width="500px" height="300px"></canvas>
                 </div>
 
-                <div id="home-record-id2" class="content2 all-content">
+                <div id="lineBarChart-id" class="content-lineBarChart all-content">
                     <div class="genderLabel">
                         <div class="colorDiv">
                             <label for="Gender">Choose Gender</label>
-                                <select name="gender" id="gender2">
-                                    <option value="all">All</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="mixed">Mixed</option>                    
-                                </select>
-                        <button id="btn2">Apply Filter</button>
+                            <select name="gender" id="lineBarGender">
+                                <option value="all">All</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="mixed">Mixed</option>
+                            </select>
+                            <button id="lineBarFilterBtn" class='buttons'>Apply Filter</button>
                         </div>
                     </div>
-                    <canvas id="chart2a" width="500px" height="90px"></canvas>
-                    <canvas id="chart2b" width="500px" height="100px"></canvas>
+                    <canvas id="lineBarChartCanvasA" width="500px" height="90px"></canvas>
+                    <canvas id="lineBarChartCanvasB" width="500px" height="100px"></canvas>
                 </div>
 
-                <div id="home-record-id3" class="content3 all-content">
-                    <div class = 'margin'>
-                        <canvas id="chart3" width="500px" height="200px"></canvas>
+                <div id="scatterChart-id" class="content-scatterChart all-content">
+                    <div class='margin'>
+                        <canvas id="scatterChartCanvas" width="500px" height="200px"></canvas>
                     </div>
                 </div>
 
-                <div id="home-record-id5" class="content5 all-content">
+                <div id="radarChart-id" class="content-radarChart all-content">
                     <div class="genderLabel">
                         <div class="colorDiv">
-                            <select name="artist1" id="artist1"></select>
-                            <select name="artist2" id="artist2"></select>
-                            <button id="btn5">Go!</button>
+                            <select name="artist1" id="artistOne"></select>
+                            <select name="artist2" id="artistTwo"></select>
+                            <button id="radarFilterBtn" class='buttons'>Go!</button>
                         </div>
                     </div>
-                    <div class = "radarSize">
-                        <canvas id="chart5"></canvas>
+                    <div class="radarSize">
+                        <canvas id="radarChartCanvas"></canvas>
                     </div>
                 </div>
 

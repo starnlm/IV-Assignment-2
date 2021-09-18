@@ -46,7 +46,7 @@ h1{
     text-align: center;
 }
 
-#main-viz{
+#mainVisual{
     display: grid;
     align-content: center;
     justify-content: center;
@@ -78,45 +78,43 @@ ul{
     font-size: 1.05em;
 }
 
-.nav-1{
+.nav-barChart{
     left: 30px;
     top: 100px;
 }
-.nav-1:hover{
+.nav-barChart:hover{
     font-weight: bold;
     font-size: 1.05em;
 }
 
-.nav-2{
+.nav-lineBarChart{
     margin-left: 100px;
     top: 200px;
 }
-.nav-2:hover{
+.nav-lineBarChart:hover{
     font-weight: bold;
     font-size: 1.05em;
 }
 
-.nav-3{
+.nav-scatterChart{
     margin-left: 20px;
     top: 300px;
 }
-.nav-3:hover{
+.nav-scatterChart:hover{
     font-weight: bold;
     font-size: 1.05em;
 }
 
-
-.nav-5{
+.nav-radarChart{
     top: 400px;
     left: -20px;
 }
-.nav-5:hover{
+.nav-radarChart:hover{
     font-weight: bold;
     font-size: 1.05em;
 }
 
-
-.content1{
+.content-barChart{
     display: none;
     overflow: scroll;
     padding-left: 17px;
@@ -139,17 +137,17 @@ ul{
     font-family: 'Roboto';
 }
 
-#artist1{
+#artistOne{
     font-family: 'Roboto';
 }
 
-#artist2{
+#artistTwo{
     font-family: 'Roboto';
 }
 
 .colorDiv{
     background-color: #BFD8B8;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     font-size: 1em;
 }
@@ -158,13 +156,32 @@ label{
     margin-right: 5px;
 }
 
-.content2{
+.buttons{
+    background-color: white;
+    border: 2px solid #92967D;
+    color: black;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Roboto';
+    transition-duration: 0.3s;
+}
+
+.buttons:hover {
+    background-color: #92967D;
+    color: white;
+  }
+
+.content-lineBarChart{
     display: none;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-.content3{
+.content-scatterChart{
     display: none;
     padding-left: 10px;
     padding-right: 10px;
@@ -180,7 +197,7 @@ label{
     padding-left: 10px;
 }
 
-.content5 {
+.content-radarChart{
     display: none;
     overflow: scroll;
     overflow-x: hidden;
@@ -193,18 +210,18 @@ label{
     width: 600px;
 }
 
-.relative {
+.relative{
     position: relative;
 }
 
-.absolute {
+.absolute{
     position: absolute;
     text-shadow: 2px 2px 8px #c78e8e; 
     cursor: pointer;
     transition: 0.2s;
 }
 
-.all-content {
+.all-content{
     /* background-color: #F4D19B; */
     background-color: #E7EAB5;
     /* border-color:black; */
@@ -221,48 +238,49 @@ label{
     font-family: 'Cookie';
 }
 
-.change-content:after {
+.change-content:after{
     content: '';
     animation: changetext 22s infinite linear;
 }
 
-@keyframes changetext {
+@keyframes changetext{
     0%{content: "Climb the ladder to success, escalator style - Notorious B.I.G."}
-    33%{content: "If you're scared to take the chances, you'll never have the answers - Nas"}
+    34%{content: "If you're scared to take the chances, you'll never have the answers - Nas"}
     66%{content: "Living life is a choice making a difference in someone else's isn't - Kid Cudi"}
     100%{content: "Better late than never but never late is better - Drake"}
 }
 
-.quote {
+.quote{
     text-align: center;
     padding-top: 50px;
 }
 
-.information {
-    display: grid;
-    grid-template-columns: 250px 150px 250px;
+.information{
+    display: flex;
+    /* grid-template-columns: 300px 100px 300px; */
     justify-content: space-between;
+    width: 1000px;
     padding-top: 120px;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
-/* width */
-::-webkit-scrollbar {
+/* Custom Scrollbar  */
+::-webkit-scrollbar{
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+}
+
+/* Track */
+::-webkit-scrollbar-track{
+background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover{
+background: #555;
+}
