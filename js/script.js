@@ -1,82 +1,3 @@
-const navBtn = document.getElementById('home');
-const firstBtn = document.getElementById('first');
-const secondBtn = document.getElementById('second');
-const thirdBtn = document.getElementById('third');
-const fifthBtn = document.getElementById('fifth');
-const firstData = document.getElementById('home-record-id1');
-const secondData = document.getElementById('home-record-id2');
-const thirdData = document.getElementById('home-record-id3');
-const fifthData = document.getElementById('home-record-id5');
-
-dData = document.getElementById('main-viz');
-
-
-navBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "none";
-    thirdData.style.display = "none";
-    fifthData.style.display = "none";
-    dData.style.display = "block";
-    navBtn.style.fontWeight = "bold";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "normal";
-});
-
-firstBtn.addEventListener('click', () => {
-    firstData.style.display = "block";
-    secondData.style.display = "none";
-    thirdData.style.display = "none";
-    fifthData.style.display = "none";
-    dData.style.display = "none";
-    navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "bold";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "normal";
-});
-
-secondBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "block";
-    thirdData.style.display = "none";
-    fifthData.style.display = "none";
-    dData.style.display = "none";
-    navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "bold";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "normal";
-
-});
-
-thirdBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "none";
-    thirdData.style.display = "block";
-    fifthData.style.display = "none";
-    dData.style.display = "none";
-    navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "bold";
-    fifthBtn.style.fontWeight = "normal";
-});
-
-fifthBtn.addEventListener('click', () => {
-    firstData.style.display = "none";
-    secondData.style.display = "none";
-    thirdData.style.display = "none";
-    fifthData.style.display = "block";
-    dData.style.display = "none";
-    navBtn.style.fontWeight = "normal";
-    firstBtn.style.fontWeight = "normal";
-    secondBtn.style.fontWeight = "normal";
-    thirdBtn.style.fontWeight = "normal";
-    fifthBtn.style.fontWeight = "bold";
-});
-
 let table = [
     {
         "ID": 1,
@@ -4434,6 +4355,85 @@ let table = [
     }
 ]
 
+const navBtn = document.getElementById('home');
+const firstBtn = document.getElementById('first');
+const secondBtn = document.getElementById('second');
+const thirdBtn = document.getElementById('third');
+const fifthBtn = document.getElementById('fifth');
+const firstData = document.getElementById('home-record-id1');
+const secondData = document.getElementById('home-record-id2');
+const thirdData = document.getElementById('home-record-id3');
+const fifthData = document.getElementById('home-record-id5');
+
+dData = document.getElementById('main-viz');
+
+
+navBtn.addEventListener('click', () => {
+    firstData.style.display = "none";
+    secondData.style.display = "none";
+    thirdData.style.display = "none";
+    fifthData.style.display = "none";
+    dData.style.display = "block";
+    navBtn.style.fontWeight = "bold";
+    firstBtn.style.fontWeight = "normal";
+    secondBtn.style.fontWeight = "normal";
+    thirdBtn.style.fontWeight = "normal";
+    fifthBtn.style.fontWeight = "normal";
+});
+
+firstBtn.addEventListener('click', () => {
+    firstData.style.display = "block";
+    secondData.style.display = "none";
+    thirdData.style.display = "none";
+    fifthData.style.display = "none";
+    dData.style.display = "none";
+    navBtn.style.fontWeight = "normal";
+    firstBtn.style.fontWeight = "bold";
+    secondBtn.style.fontWeight = "normal";
+    thirdBtn.style.fontWeight = "normal";
+    fifthBtn.style.fontWeight = "normal";
+});
+
+secondBtn.addEventListener('click', () => {
+    firstData.style.display = "none";
+    secondData.style.display = "block";
+    thirdData.style.display = "none";
+    fifthData.style.display = "none";
+    dData.style.display = "none";
+    navBtn.style.fontWeight = "normal";
+    firstBtn.style.fontWeight = "normal";
+    secondBtn.style.fontWeight = "bold";
+    thirdBtn.style.fontWeight = "normal";
+    fifthBtn.style.fontWeight = "normal";
+
+});
+
+thirdBtn.addEventListener('click', () => {
+    firstData.style.display = "none";
+    secondData.style.display = "none";
+    thirdData.style.display = "block";
+    fifthData.style.display = "none";
+    dData.style.display = "none";
+    navBtn.style.fontWeight = "normal";
+    firstBtn.style.fontWeight = "normal";
+    secondBtn.style.fontWeight = "normal";
+    thirdBtn.style.fontWeight = "bold";
+    fifthBtn.style.fontWeight = "normal";
+});
+
+fifthBtn.addEventListener('click', () => {
+    firstData.style.display = "none";
+    secondData.style.display = "none";
+    thirdData.style.display = "none";
+    fifthData.style.display = "block";
+    dData.style.display = "none";
+    navBtn.style.fontWeight = "normal";
+    firstBtn.style.fontWeight = "normal";
+    secondBtn.style.fontWeight = "normal";
+    thirdBtn.style.fontWeight = "normal";
+    fifthBtn.style.fontWeight = "bold";
+});
+
 const arr = [...table];
 const genderBtn1 = document.querySelector('#btn1');
 const sb1 = document.querySelector('#gender1')
@@ -4496,7 +4496,7 @@ let chart1 = new Chart('chart1', {
     data: {
         labels: artists.artist,
         datasets: [{
-            backgroundColor: '#3347FF',
+            backgroundColor: '#155263',
             barPercentage: 0.85,
             data: artists,
             parsing: {
@@ -4521,7 +4521,7 @@ let chart1 = new Chart('chart1', {
                     display: false
                 },
                 ticks: {
-                    color: 'white'
+                    // color: 'white'
                 },
                 title: {
                 }
@@ -4535,12 +4535,12 @@ let chart1 = new Chart('chart1', {
             },
             title: {
                 display: true,
-                text: 'Percentage of Reserved Parks - by States in Aus',
+                text: 'Total Points Received by Artists',
                 font: {
                     size: 15,
                     family: "'Roboto Slab', sans-serif",
                 },
-                color: 'white'
+                // color: 'white'
             },
             tooltip: {
             }
@@ -4626,7 +4626,7 @@ let chart2a = new Chart('chart2a', {
     type: 'line',
     data: {
         datasets: [{
-            backgroundColor: '#3347FF',
+            backgroundColor: '#155263',
             barPercentage: 0.85,
             data: yearData,
             parsing: {
@@ -4651,7 +4651,7 @@ let chart2a = new Chart('chart2a', {
                     display: false
                 },
                 ticks: {
-                    color: 'white'
+                    // color: 'white'
                 },
                 title: {
                 }
@@ -4665,12 +4665,12 @@ let chart2a = new Chart('chart2a', {
             },
             title: {
                 display: true,
-                text: 'Percentage of Reserved Parks - by States in Aus',
+                text: 'Total Points Received Each Year',
                 font: {
                     size: 15,
                     family: "'Roboto Slab', sans-serif",
                 },
-                color: 'white'
+                // color: 'white'
             },
             tooltip: {
             }
@@ -4684,7 +4684,7 @@ let chart2b = new Chart('chart2b', {
     type: 'bar',
     data: {
         datasets: [{
-            backgroundColor: '#3347FF',
+            backgroundColor: '#155263',
             barPercentage: 0.85,
             data: trackData,
             parsing: {
@@ -4709,7 +4709,7 @@ let chart2b = new Chart('chart2b', {
                     display: false
                 },
                 ticks: {
-                    color: 'white'
+                    // color: 'white'
                 },
                 title: {
                 }
@@ -4723,12 +4723,12 @@ let chart2b = new Chart('chart2b', {
             },
             title: {
                 display: true,
-                text: 'Percentage of Reserved Parks - by States in Aus',
+                text: 'Number of Tracks Nominated Each Year',
                 font: {
                     size: 15,
                     family: "'Roboto Slab', sans-serif",
                 },
-                color: 'white'
+                // color: 'white'
             },
             tooltip: {
             }
@@ -4761,7 +4761,8 @@ let chart3 = new Chart('chart3', {
     type: 'scatter',
     data: {
         datasets: [{
-            backgroundColor: '#33BCFF',
+            label: 'Female',
+            backgroundColor: '#17B978',
             barPercentage: 0.85,
             data: arrFemale,
             parsing: {
@@ -4769,7 +4770,8 @@ let chart3 = new Chart('chart3', {
                 yAxisKey: 'points'
             }
         },{
-            backgroundColor: '#FF5C58',
+            label: 'Mixed',
+            backgroundColor: '#155263',
             barPercentage: 0.85,
             data: arrMixed,
             parsing: {
@@ -4777,7 +4779,8 @@ let chart3 = new Chart('chart3', {
                 yAxisKey: 'points'
             }
         },{
-            backgroundColor: '#3347FF',
+            label: 'Male',
+            backgroundColor: '#FB929E',
             barPercentage: 0.85,
             data: arrMale,
             parsing: {
@@ -4793,6 +4796,10 @@ let chart3 = new Chart('chart3', {
                     display: false
                 },
                 ticks: {
+                    callback: function(value){
+                        var tempVal = value.toString();
+                        return tempVal.replace(',', '');
+                    }
                 },
                 title: {
                 }
@@ -4802,7 +4809,7 @@ let chart3 = new Chart('chart3', {
                     display: false
                 },
                 ticks: {
-                    color: 'white'
+                    // color: 'black'
                 },
                 title: {
                 }
@@ -4812,16 +4819,16 @@ let chart3 = new Chart('chart3', {
         },
         plugins: {
             legend: {
-                display: false
+                display: true
             },
             title: {
                 display: true,
-                text: 'Percentage of Reserved Parks - by States in Aus',
+                text: 'Scatterplot of Every Voted Song',
                 font: {
                     size: 15,
                     family: "'Roboto Slab', sans-serif",
                 },
-                color: 'white'
+                color: 'black'
             },
             tooltip: {
             }
@@ -4834,6 +4841,7 @@ let chart3 = new Chart('chart3', {
 const selector1 = document.getElementById('artist1');
 const selector2 = document.getElementById('artist2');
 const artistBtn = document.querySelector('#btn5');
+var color = Chart.helpers.color;
 
 
 var art = new Set();
@@ -4841,8 +4849,10 @@ for(row of table){
     art.add(row.artist)
 }
 
+var sortedArt = [...art].sort();
+
 var str = "<option value='none' selected disabled hidden> Select Artist</option>"
-for(row of art){
+for(row of sortedArt){
     str += "<option value = '" + row + "'>" + row + "</option>";
 }
 // console.log(str)
@@ -4865,63 +4875,53 @@ function individualPoints(name){
 
 artistBtn.onclick = (event) => {
     event.preventDefault();
+    var artistName1 = selector1.value
+    var artistName2 = selector2.value
     radarChart.data.datasets[0].data = individualPoints(selector1.value);
     radarChart.data.datasets[1].data = individualPoints(selector2.value);
+    radarChart.data.datasets[0].label = selector1.value;
+    radarChart.data.datasets[1].label = selector2.value;
     console.log(individualPoints(selector1.value));
     console.log(individualPoints(selector2.value));
     radarChart.update();
 };
 
+
 let radarChart= new Chart('chart5', {
     type: 'radar',
     data: {
-        labels: ['n1', 'n2', 'n3', 'n4', 'n5'],
+        labels: ['Favourite', 'Second Fav', 'Third Fav', 'Fourth Fav', 'Fifth Fav'],
         datasets: [{
-            backgroundColor: '#3347FF',
+            label:'Artist1',
+            backgroundColor: color('rgb(21,82,99)').alpha(0.2).rgbString(),
+            borderColor: 'rgb(21,82,99)',
+            pointBackgroundColor: 'rgb(21,82,99)',
             barPercentage: 0.85,
             data: [0,0,0,0,0]
         },{
-            backgroundColor: '#FF5C58',
+            label:'Artist2',
+            backgroundColor: color('rgb(23,185,120)').alpha(0.2).rgbString(),
+            borderColor: 'rgb(23,185,120)',
+            pointBackgroundColor: 'rgb(23,185,120)',
             barPercentage: 0.85,
             data: [0,0,0,0,0]
         }]
     },
     options: {
-        scales: {
-            x: {
-                grid: {
-                    display: false
-                },
-                ticks: {
-                },
-                title: {
-                }
-            },
-            y: {
-                grid: {
-                    display: false
-                },
-                ticks: {
-                    color: 'white'
-                },
-                title: {
-                }
-            }
-        },
         animation: {
         },
         plugins: {
             legend: {
-                display: false
+                display: true
             },
             title: {
                 display: true,
-                text: 'Percentage of Reserved Parks - by States in Aus',
+                text: 'Total Number of Times Artists Song was a Favourite',
                 font: {
                     size: 15,
                     family: "'Roboto Slab', sans-serif",
                 },
-                color: 'white'
+                // color: 'white'
             },
             tooltip: {
             }

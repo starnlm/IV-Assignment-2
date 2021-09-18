@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Merriweather:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap&family=Cookie&display=swap');
     
 body{
-    background: #B4846C;
+    /* background: #B4846C; */
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/hiphop.jpg);
+    background-position: center;
     margin-left: 0;
     margin-top: 0;
-    font-family: 'Merriweather';
+    font-family: 'Yanone Kaffeesatz';
+    font-size: 1.2em;
 }
 
 .hero{
@@ -24,19 +26,30 @@ h1{
     font-size: 3em;
     margin-bottom: 0px;
     margin-top: 0;
+    color: #FEFBF3;
 }
 .title-text{
     font-family: 'Bebas Neue';
     font-size:1.2em;
+    color: #E7EAB5;
 }
 
 .head{
-    font-family: 'Merriweather';
+    font-family: 'Yanone Kaffeesatz';
+    /* font-size: 1.2em; */
     margin-top: 1px;
+    color: #FEFBF3;
+
 }
 
 .title{
     text-align: center;
+}
+
+#main-viz{
+    display: grid;
+    align-content: center;
+    justify-content: center;
 }
 
 .navigation{
@@ -51,14 +64,14 @@ h1{
 ul{
     margin-top: 0;
     list-style-type: none;
-    color: aliceblue;
+    color: rgb(230, 238, 245);
 }
 
 .nav-home{
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: bold;
-    cursor: pointer;    
+    left: -20px;
 }
 .nav-home:hover{
     font-weight: bold;
@@ -68,7 +81,6 @@ ul{
 .nav-1{
     left: 30px;
     top: 100px;
-    cursor: pointer;
 }
 .nav-1:hover{
     font-weight: bold;
@@ -78,7 +90,6 @@ ul{
 .nav-2{
     margin-left: 100px;
     top: 200px;
-    cursor: pointer;
 }
 .nav-2:hover{
     font-weight: bold;
@@ -88,7 +99,6 @@ ul{
 .nav-3{
     margin-left: 20px;
     top: 300px;
-    cursor: pointer;
 }
 .nav-3:hover{
     font-weight: bold;
@@ -98,7 +108,7 @@ ul{
 
 .nav-5{
     top: 400px;
-    cursor: pointer;
+    left: -20px;
 }
 .nav-5:hover{
     font-weight: bold;
@@ -108,20 +118,80 @@ ul{
 
 .content1{
     display: none;
+    overflow: scroll;
+    padding-left: 17px;
+    overflow-x: hidden;
+}
+
+.genderLabel{
+    display: flex;
+    /* align-content: center; */
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+#gender1{
+    font-family: 'Roboto';
+}
+
+#gender2{
+    font-family: 'Roboto';
+}
+
+#artist1{
+    font-family: 'Roboto';
+}
+
+#artist2{
+    font-family: 'Roboto';
+}
+
+.colorDiv{
+    background-color: #BFD8B8;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+label{
+    margin-right: 5px;
 }
 
 .content2{
     display: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .content3{
     display: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+}
+
+.margin{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .content5 {
     display: none;
+    overflow: scroll;
+    overflow-x: hidden;
+
 }
 
+.radarSize{
+    margin: 5px auto;
+    height: 600px;
+    width: 600px;
+}
 
 .relative {
     position: relative;
@@ -129,43 +199,70 @@ ul{
 
 .absolute {
     position: absolute;
+    text-shadow: 2px 2px 8px #c78e8e; 
+    cursor: pointer;
+    transition: 0.2s;
 }
 
 .all-content {
-    background-color: #7D5A50;
+    /* background-color: #F4D19B; */
+    background-color: #E7EAB5;
     /* border-color:black; */
     height: 470px;
-    -webkit-box-shadow: 0 0 10px 4px #000 inset;
-    box-shadow: 0 0 9px 4px #000 inset;
+    /* -webkit-box-shadow: 0 0 10px 4px #000 inset;
+    box-shadow: 0 0 9px 4px #000 inset; */
     border-radius: 5px;
     /* white-space: nowrap; */
-    overflow: scroll;
     /* text-overflow: ellipsis; */
+}
+
+.change-content{
+    font-size: 2em;
+    font-family: 'Cookie';
 }
 
 .change-content:after {
     content: '';
-    animation: changetext 20s infinite linear;
-    animation-timing-function: ease-in-out;
+    animation: changetext 22s infinite linear;
 }
 
 @keyframes changetext {
-    0%{content: 'ux Developer'}
-    33%{content: 'ui Developer'}
-    66%{content: 'Web Developer'}
-    100%{content: 'designer'}
+    0%{content: "Climb the ladder to success, escalator style - Notorious B.I.G."}
+    33%{content: "If you're scared to take the chances, you'll never have the answers - Nas"}
+    66%{content: "Living life is a choice making a difference in someone else's isn't - Kid Cudi"}
+    100%{content: "Better late than never but never late is better - Drake"}
 }
 
 .quote {
     text-align: center;
-    padding-top: 150px;
+    padding-top: 50px;
 }
 
 .information {
     display: grid;
     grid-template-columns: 250px 150px 250px;
     justify-content: space-between;
-    padding-top: 220px;
+    padding-top: 120px;
     padding-left: 20px;
     padding-right: 20px;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
