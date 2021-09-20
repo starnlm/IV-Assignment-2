@@ -3,7 +3,7 @@
 body{
     /* background: #B4846C; */
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/hiphop.jpg);
-    background-repeat: no-repeat;
+    /*     background-repeat: no-repeat; */
     background-position: center;
     margin-left: 0;
     margin-top: 0;
